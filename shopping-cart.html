@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мебельная Галерея</title>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon.png">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/shopping-cart.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="header-body">
+        <div class="logo">
+            <img src="static/images/favicon/favicon.png" alt="Логотип сайта" width="40px" height="29px">
+            <h3>Мебельная Галерея</h3>
+        </div>
+
+        <nav class="nav-menu">
+            <input type="checkbox" id="checkbox-toggle">
+            <label for="checkbox-toggle" class="hamburger"><span class="hamburger-line"></span></label>
+            <ul class="nav-list">
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="shopping-cart.html">Корзина</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+    <main>
+        <article class="shopping-cart">
+            <section><h2>Корзина</h2></section>
+            <section class="items"></section>
+            <section class="buy-section"><a href="delivery.html" class="buy-button">Перейти к оформлению</a></section>
+        </article>
+
+        <script src="scripts/script-shopping-cart.js"></script>
+    </main>
+
+    <footer>
+        <div class="about-us">
+            <h3>О нас</h3>
+            <p>
+                Добро пожаловать в Мебельную Галерею! В нашем магазине мы предлагаем широкий ассортимент стильной и функциональной мебели для вашего дома. Наш магазин создан с любовью к дизайну и заботой о вашем комфорте.
+            </p>
+        </div>
+
+        <div class="quick-links">
+            <h3>Быстрые ссылки</h3>
+            <ul>
+                <li><a href="index.html">Главная страница</a></li>
+                <li><a href="page.html">Диваны</a></li>
+                <li><a href="login.html">Авторизация</a></li>
+                <li><a href="shopping-cart.html">Корзина</a></li>
+                <li><a href="#">Правила сайта</a></li>
+                <li><a href="#">Галерея изображений</a></li>
+            </ul>
+        </div>
+
+        <div class="shop">
+            <h3>Магазин</h3>
+            <ul>
+                <li><a href="#">Диваны</a></li>
+                <li><a href="#">Кровати</a></li>
+                <li><a href="#">Кресла</a></li>
+                <li><a href="#">Стулья</a></li>
+                <li><a href="#">Столы</a></li>               
+                <li><a href="#">Шкафы</a></li>
+             </ul>
+        </div>
+
+        <div class="contact-us">
+            <h3>Свяжитесь с нами</h3>
+            <address>
+                Телефон: <a href="tel:+79999999999">+7 (999) 999-99-99</a></p>
+                Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            </address>
+            <div class="circle-buttons">
+                <button class="circle" id="circle1"></button>
+                <button class="circle" id="circle2"></button>
+                <button class="circle" id="circle3"></button>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

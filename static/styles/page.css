@@ -1,0 +1,463 @@
+dl{
+    display: inline;
+}
+
+body{
+    position: relative;
+}
+
+
+.sofa-sections{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.description{ /* описание диванов в page.html */
+    display: inline-block;
+}
+
+.filter {
+    padding: 100px 20px 20px 20px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.filter h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.filter-item {
+    margin-bottom: 20px;
+}
+
+.filter-item p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Стили для чекбоксов */
+.filter-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Стили для кнопки */
+.filter-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.filter-button:hover {
+    background-color: #45a049;
+}
+
+.filter-button:active {
+    background-color: #3e8e41;
+}
+
+.sofa-sections img{
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.items li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0.5;
+    width: 325px;
+    height: 250px;
+    margin: 100px 0;
+    border-radius: 10px;
+    border: 1px gray solid;
+    overflow: hidden;
+    background-color: white;
+    transition: height ease-in-out 0.5s, margin ease-in-out 0.5s;
+}
+
+.items li img {
+    width: 300px;
+    height: 200px;
+}
+
+.items li:hover{
+    margin: 0;
+    height: 450px;
+    box-shadow: 0 0 5px 2px gray;
+}
+
+.items li .info{
+    visibility: hidden;
+
+    opacity: 0;
+    width: 80%;
+
+
+    transition: opacity ease-in-out 0.5s;
+}
+
+.items li:hover .info{
+    opacity: 1;
+    visibility: visible;
+}
+
+.items li .buy{
+
+    width: 80%;
+
+}
+
+.items li p{ 
+    font-size: 24px;
+    color: black;
+}
+
+.info {
+    width: 100%;
+}
+
+.info-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+body{
+    display: grid;
+    grid-template: auto auto auto / 200px auto 20%;
+    grid-template-areas: 
+    "header header header"
+    "sidebar main ads"
+    "footer footer footer";
+}
+
+header{
+    grid-area: header;
+}
+.filter{
+    grid-area: sidebar;
+}
+main{
+    grid-area: main;
+}
+.ads{
+    grid-area: ads;
+}
+footer{
+    grid-area: footer;
+}
+
+
+.ads{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+}
+
+.ads-item img{
+    width: 100%;
+}
+
+
+@media (min-width: 1001px){
+    .ads-item:last-child{
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+
+    body{
+        grid-template: auto auto auto / 200px auto;
+        grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "ads footer";
+    }
+
+
+    footer{
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px 50px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body{
+        grid-template: auto auto 500px auto auto / auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "ads"
+        "footer";
+    }
+
+    section{
+        margin-bottom: 20px;
+    }
+
+    .filter-block{
+        height: 50vh;
+        display: grid;
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        grid-template-areas:
+        "h3 h3"
+        "item1 item2"
+        "item3 item4"
+        "button button";
+        margin: 20px 0;
+        gap: 0;
+    }
+    .filter-block h3{
+        grid-area: h3;
+    }
+    .filter-item:nth-child(2){
+        grid-area: item1;
+    }
+    .filter-item:nth-child(3){
+        grid-area: item2;
+    }
+    .filter-item:nth-child(4){
+        grid-area: item3;
+    }
+    .filter-item:nth-child(5){
+        grid-area: item4;
+    }
+
+
+    .filter-block button{
+        grid-area: button;
+    }
+    .filter-item p{
+        margin-bottom: 20px;
+    }
+
+    .ads{
+        display: grid;
+        grid-template: auto auto / repeat(2, 1fr);
+        padding: 10px;
+    }
+    .ads-item:nth-child(3) {
+        display: none;
+    }
+    .ads-item:last-child{
+        display: none;
+    }
+
+    .grid-item img{
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .items li{
+        width: 275px;
+        height: 150px;
+        margin: 80px 0;
+        font-size: 16px;
+    }
+    
+    .items li img {
+        width: 150px;
+        height: 100px;
+    }
+    
+    .items li:hover{
+        margin: 0;
+        height: 310px;
+        box-shadow: 0 0 5px 2px gray;
+    }
+
+    .orange.button {
+        width: 125px;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .filter{
+        padding: 20px;
+    }
+}
+
+.sorting-buttons{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.sorting-buttons button{
+    background-color: orange;
+    color: white;
+    width: 125px;
+    height: 30px;
+    padding: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.button{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.orange.button {
+    background-color: orange;
+    color: white;
+    transition: background-color 0.3s ease-in-out, 0.3s color ease-in-out;
+    box-shadow: 5px 5px 5px gray, 0 15px 15px rgb(255, 110, 0) inset;
+}
+
+.orange.button:hover{
+    background-color: white;
+    color: orange;
+    border-radius: 0;
+    box-shadow: 5px 5px 5px gray, 0 5px 5px gray inset, 5px 0 5px gray inset;
+}
+
+.orange.button span{
+    position: absolute;
+    display: block;
+    background: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.orange.button span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.orange.button:hover span:nth-child(1){
+    background: orange;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.orange.button span:nth-child(2){
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.orange.button:hover span:nth-child(2){
+    background: orange;
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
+
+.orange.button span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.orange.button:hover span:nth-child(3){
+    background: orange;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.orange.button span:nth-child(4){
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.orange.button:hover span:nth-child(4){
+    background: orange;
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.orange.button:active{
+    background-color: rgb(245, 245, 245);
+}
+
+.flash.button {
+    background-color: rgb(255, 60, 138);
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+    overflow-x: hidden;
+}
+
+.flash.button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    transform: translateX(-45px) skewX(-30deg);
+}
+
+.flash.button:hover::before{
+    animation: flash-shadow 0.3s ease-in-out;
+}
+
+@keyframes flash-shadow {
+    from {
+        transform: translateX(-20px) skewX(-30deg);
+    }
+    to {
+        transform: translateX(170px) skewX(-30deg);
+    }
+}
+
+.flash.button:active{
+    background-color: rgb(225, 48, 119);
+}
+
+s, strong{
+    font-size: larger;
+}

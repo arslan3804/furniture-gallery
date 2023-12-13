@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мебельная Галерея</title>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon.png">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/login.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="header-body">
+        <div class="logo">
+            <img src="static/images/favicon/favicon.png" alt="Логотип сайта" width="40px" height="29px">
+            <h3>Мебельная Галерея</h3>
+        </div>
+
+        <nav class="nav-menu">
+            <input type="checkbox" id="checkbox-toggle">
+            <label for="checkbox-toggle" class="hamburger"><span class="hamburger-line"></span></label>
+            <ul class="nav-list">
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="shopping-cart.html">Корзина</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+    <main>
+
+        <form class="contact-form">
+            
+            <h2 class="form-title">Авторизация</h2>
+            <div class="input-form">
+                <input type="email" id="mail" name="mail" placeholder="Введите почту">
+            </div>
+            <div class="input-form">
+                <input type="password" id="password" name="password" pattern="[0-9]{10}" placeholder="Введите пароль">
+            </div>
+            <div class="input-form">
+                <input type="submit" value="Войти">
+            </div>
+
+            <div class="extra-inf">
+                <div>
+                    <p>
+                        Забыли пароль? <a href="#">Перейти</a>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Еще нет аккаунта? <a href="registration.html">Зарегистрироваться</a>
+                    </p>
+                </div>
+            </div>
+            <div class="square first"></div>
+            <div class="square second"></div>
+            <div class="square third"></div>
+            <div class="square fourth"></div>
+            <div class="square fifth"></div>
+        </form>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мебельная Галерея</title>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon.png">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/page.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="header-body">
+        <div class="logo">
+            <img src="static/images/favicon/favicon.png" alt="Логотип сайта" width="40px" height="29px">
+            <h3>Мебельная Галерея</h3>
+        </div>
+
+        <nav class="nav-menu">
+            <input type="checkbox" id="checkbox-toggle">
+            <label for="checkbox-toggle" class="hamburger"><span class="hamburger-line"></span></label>
+            <ul class="nav-list">
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="shopping-cart.html">Корзина</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+    <aside class="filter">
+        <div class="filter-block">
+            <h3>Фильтры</h3>
+
+            <div class="filter-item price">
+                <p>Цена</p>
+                <ul type="none">
+                    <li><input type="checkbox" data-min-price="0" data-max-price="9999">Менее 10000 ₽</input></li>
+                    <li><input type="checkbox" data-min-price="10000" data-max-price="19999">10000 - 19999 ₽</input></li>
+                    <li><input type="checkbox" data-min-price="20000" data-max-price="29999">20000 - 29999 ₽</input></li>
+                    <li><input type="checkbox" data-min-price="30000" data-max-price="39999">30000 - 39999 ₽</li>
+                    <li><input type="checkbox" data-min-price="40000" data-max-price="99999">40000 ₽ и более</input></li>
+                </ul>
+            </div>
+
+            <div class="filter-item width">
+                <p>Ширина дивана</p>
+                <ul type="none">
+                    <li><input type="checkbox" data-min-width="0" data-max-width="219">Меньше 220 см</li>
+                    <li><input type="checkbox" data-min-width="220" data-max-width="259">220-259 см</li>
+                    <li><input type="checkbox" data-min-width="260" data-max-width="299">260-299 см</li>
+                    <li><input type="checkbox" data-min-width="300" data-max-width="999">300 см и более</li>
+                </ul>
+            </div>
+
+            <div class="filter-item mechanism">
+                <p>Механизм трансформации</p>
+                <ul type="none">
+                    <li><input type="checkbox" data-mechanism="0">Книжка</li>
+                    <li><input type="checkbox" data-mechanism="1">Дельфин</li>
+                    <li><input type="checkbox" data-mechanism="2">Еврокнижка</li>
+                    <li><input type="checkbox" data-mechanism="3">Аккордеон</li>
+                    <li><input type="checkbox" data-mechanism="4">Тик-так</li>
+                </ul>
+            </div>
+
+            <div class="filter-item color">
+                <p>Цвет</p>
+                <ul type="none">
+                    <li><input type="checkbox" class="white" data-color="0">Белый</li>
+                    <li><input type="checkbox" class="black" data-color="1">Черный</li>
+                    <li><input type="checkbox" class="blue" data-color="2">Синий</li>
+                    <li><input type="checkbox" class="green" data-color="3">Серый</li>
+                    <li><input type="checkbox" class="red" data-color="4">Бежевый</li>
+                </ul>
+            </div>
+
+            <button class="filter-button">Применить фильтры</button>
+        </div>
+    </aside>
+
+    <main>        
+
+        <section>
+            <h2>Диваны</h2>
+        </section>
+
+        <section class="sorting-buttons">
+            <button class="low-to-high flash button">По возрастанию</button>
+            <button class="high-to-low flash button">По убыванию</button>
+        </section>
+
+        <section class="sofa-sections">
+            <ul class="items">
+                <li price="29999" data-width="241" data-color="2" data-mechanism="2">
+                    <img src="static/images/items/sofas/MadridSofa.jpg" alt="Диван Мадрид">
+                    <div class="buy">
+                        <div>Диван Мадрид</div>
+                        <div><strong>Цена: 29 999₽</strong><s> 42 999₽</s></div>
+                    </div>
+                    <div class="info">
+                        <div class="info-text">
+                            <span class="left">Размеры дивана (ШхВхГ)</span>
+                            <span class="right">241х91х108 см</span>
+                        </div>
+                        <div class="info-text">
+                            <span class="left">Цвет</span>
+                            <span class="right">Синий</span>
+                        </div>
+                        <div class="info-text">
+                            <span class="left">Механизм трансформации</span>
+                            <span class="right">Еврокнижка</span>
+                        </div>
+                        <button class="orange button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            В корзину
+                        </button>
+                    </div>
+                </li>
+                <li price="67999" price="79999" data-width="225" data-color="3" data-mechanism="3">
+                    <img src="static/images/items/sofas/StanfordSofa.jpg" alt="Диван Стэнфорд">
+                    <div class="buy">
+                        <div>Диван Стэнфорд</div>
+                        <div><strong>Цена: 67 999₽</strong><s> 79 999₽</s></div>
+                    </div>
+                    <div class="info">
+                        <div class="info-text">
+                            <span class="left">Размеры дивана (ШхВхГ):</span>
+                            <span class="right">225х93х118 см</span>
+                        </div>
+                        <div class="info-text">
+                            <span class="left">Цвет</span>
+                            <span class="right">Cерый</span>
+                        </div>
+                        <div class="info-text">
+                            <span class="left">Механизм трансформации</span>
+                            <span class="right">Аккордеон</span>
+                        </div>
+                        <button class="orange button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            В корзину
+                        </button>
+                    </div>
+                </li>
+                <li price="22999" data-width="235" data-color="4" data-mechanism="1">
+                    <img src="static/images/items/sofas/TorontoSofa.jpg" alt="Диван Торонто">
+                    <div class="buy">
+                        <div>Диван Торонто</div>
+                        <div><strong>Цена: 22 999₽</strong><s> 29 999₽</s></div>
+                    </div>
+                    <div class="info">
+                        <div class="info-text">
+                            <span class="left">Размеры дивана (ШхВхГ)</span>
+                            <span class="right">235х90х155 см</span>
+                        </div>
+                        <div class="info-text">
+                            <span class="left">Цвет</span>
+                            <span class="right">Бежевый</span>
+                        </div>
+                        <div class="info-text">
+                            <span class="left">Механизм трансформации</span>
+                            <span class="right">Дельфин</span>
+                        </div>
+                        <button class="orange button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            В корзину
+                        </button>
+                    </div>
+                </li>
+                <li price="19999" data-width="204" data-color="4" data-mechanism="2">
+                    <img src="static/images/items/sofas/UnoSofa.jpg" alt="Диван Уно">
+                    <div class="buy">
+                        <div>Диван Уно</div>
+                        <div><strong>Цена: 19 999₽</strong><s> 25 999₽</s></div>
+                    </div>
+                    <div class="info">
+                        <div class="info-text">
+                            <span class="left">Размеры дивана (ШхВхГ):</span>
+                            <span class="right">204х89х87 см</span>
+                        </div>
+                        <div class="info-text">
+                            <span class="left">Цвет</span>
+                            <span class="right">Бежевый</span>
+                        </div>
+                        <div class="info-text">
+                            <span class="left">Механизм трансформации</span>
+                            <span class="right">Еврокнижка</span>
+                        </div>
+                        <button class="orange button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            В корзину
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <aside class="ads">
+        <div class="ads-item">
+            <img src="static/images/discounts/ads1.jpg" alt="">
+        </div>
+        <div class="ads-item">
+            <img src="static/images/discounts/ads2.jpg" alt="">
+        </div>
+        <div class="ads-item">
+            <img src="static/images/discounts/ads3.jpg" alt="">
+        </div>
+        <div class="ads-item">
+            <img src="static/images/discounts/ads4.jpg" alt="">
+        </div>
+    </aside>
+
+    <footer>
+        <div class="about-us">
+            <h3>О нас</h3>
+            <p>
+                Добро пожаловать в Мебельную Галерею! В нашем магазине мы предлагаем широкий ассортимент стильной и функциональной мебели для вашего дома. Наш магазин создан с любовью к дизайну и заботой о вашем комфорте.
+            </p>
+        </div>
+
+        <div class="quick-links">
+            <h3>Быстрые ссылки</h3>
+            <ul>
+                <li><a href="index.html">Главная страница</a></li>
+                <li><a href="page.html">Диваны</a></li>
+                <li><a href="login.html">Авторизация</a></li>
+                <li><a href="shopping-cart.html">Корзина</a></li>
+                <li><a href="#">Правила сайта</a></li>
+                <li><a href="#">Галерея изображений</a></li>
+            </ul>
+        </div>
+
+        <div class="shop">
+            <h3>Магазин</h3>
+            <ul>
+                <li><a href="#">Диваны</a></li>
+                <li><a href="#">Кровати</a></li>
+                <li><a href="#">Кресла</a></li>
+                <li><a href="#">Стулья</a></li>
+                <li><a href="#">Столы</a></li>               
+                <li><a href="#">Шкафы</a></li>
+             </ul>
+        </div>
+
+        <div class="contact-us">
+            <h3>Свяжитесь с нами</h3>
+            <address>
+                Телефон: <a href="tel:+79999999999">+7 (999) 999-99-99</a></p>
+                Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            </address>
+            <div class="circle-buttons">
+                <button class="circle" id="circle1"></button>
+                <button class="circle" id="circle2"></button>
+                <button class="circle" id="circle3"></button>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/script-sort.js"></script>
+    <script src="scripts/script-filter.js"></script>
+    <script src="scripts/script-add-to-shopping-cart.js"></script>
+</body>
+
+</html>

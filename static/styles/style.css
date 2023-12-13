@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+    padding: 10px 0;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover, a:visited:hover {
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+
+body{
+    margin: 0 auto;
+    padding-top: 60px;
+    background-image: url('../images/other/paper-texture\ \(1\).jpg');
+    background-repeat: repeat;
+}
+
+section{
+    background-color: rgb(255, 255, 255, 0.8);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px gray;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 40px;
+    border-bottom: 4px solid #000;
+    z-index: 2;
+    background-color: rgb(220, 220, 220);
+}
+
+.header-body{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.nav-menu, .nav-list{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li{
+    font-size: 14px;
+    list-style: none;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#checkbox-toggle{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+.hamburger-line{
+    background-color: white;
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 24px;
+}
+
+.hamburger-line::before,
+.hamburger-line::after{
+    background-color: white;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.hamburger-line::before{
+    top: 7px;
+}
+
+.hamburger-line::after{
+    top: -7px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-list{
+        display: none;
+        background-color: #f0f0f0;
+        position: absolute;
+        text-align: center;
+        top: 60px;
+        right: 0;
+        left: 0;
+    }
+
+    .nav-list li{
+        font-size: 20px;
+        padding: 25px 0;
+    }
+
+    #checkbox-toggle:checked ~ .nav-list{
+        display: block;
+    }
+
+    #checkbox-toggle:checked ~ .hamburger .hamburger-line::after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #checkbox-toggle:checked ~ .hamburger .hamburger-line::before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #checkbox-toggle:checked ~ .hamburger .hamburger-line{
+        background-color: rgb(220, 220, 220);
+    }
+
+    .hamburger{
+        display: block;
+        padding: 20px 0;
+    }
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;  
+    gap: 10px;  
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    
+    background-color: rgba(220, 220, 220, 0.8);
+    padding: 50px 100px;
+}
+
+footer h3{
+    position: relative;
+    text-align: start;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer h3::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: black;
+    z-index: 1;
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1000px) {
+
+    footer{
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 768px){
+    footer{
+        grid-template: repeat(4, auto) / 1fr;
+        gap: 10px;
+        padding: 20px 50px;
+        font-size: 12px;
+    }
+}
+
+.circle-buttons{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.circle{
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(200, 200, 200);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.circle::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+}
+
+#circle1::after{
+    background-image: url("../images/social-networks/vk.png");
+}
+
+#circle2::after{
+    background-image: url("../images/social-networks/in.png");
+}
+
+#circle3::after{
+    background-image: url("../images/social-networks/telegram.png");
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(15deg, #ffc67c, #ff7c18);
+    transition: all 0.3s ease-in-out;
+}
+
+.circle:hover::before {
+    transform: translateY(50px);
+}
+

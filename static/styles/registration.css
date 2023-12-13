@@ -1,0 +1,154 @@
+.contact-form{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    padding: 20px 50px;
+    border-radius: 20px;
+
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.input-form input[type="password"],
+.input-form input[type="email"],
+.input-form input[type="text"]
+{
+    margin: 10px 0;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.input-form input[type="submit"]{
+    margin: 10px 0;
+    width: 100%;
+    height: 50px;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.contact-form h2, .extra-inf p, .extra-inf a, label{
+    color: white;
+}
+
+label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.extra-inf a:visited, .extra-inf a:hover{
+    color: aquamarine;
+}
+
+.contact-form .square{
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: movement calc(var(--delay) * 2) 0s linear infinite alternate;
+}
+
+.contact-form .square.first{
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: -75px;
+    --delay: 1.5s;
+}
+
+.contact-form .square.second{
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: -50px;
+    --delay: 2s;
+    z-index: -10;
+}
+
+.contact-form .square.third{
+    width: 50px;
+    height: 50px;
+    top: -75px;
+    left: 150px;
+    --delay: 3s;
+}
+
+.contact-form .square.fourth{
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    left: 100px;
+    --delay: 4s;
+}
+
+.contact-form .square.fifth{
+    width: 75px;
+    height: 75px;
+    bottom: 100px;
+    right: -50px;
+    --delay: 5s;
+}
+
+@keyframes movement {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+
+.input-form input[type="submit"]:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.input-form input[type="submit"]:active{
+    background-color: rgb(220, 220, 220);
+}
+
+.captcha {
+    text-align: center;
+    margin: 10px 0;
+}
+  
+.captcha-text {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+}
+  
+#captcha-input {
+    height:50px;
+    width:100%;
+    border-radius: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border:none;
+    background-color: rgb(233, 233, 233);
+}
+  
+
+  
+.error-message {
+    color: red;
+    margin-top: 10px;
+}

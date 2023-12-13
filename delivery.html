@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мебельная Галерея</title>
+    <link rel="icon" type="image/png" href="static/images/favicon/favicon.png">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/delivery.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="header-body">
+        <div class="logo">
+            <img src="static/images/favicon/favicon.png" alt="Логотип сайта" width="40px" height="29px">
+            <h3>Мебельная Галерея</h3>
+        </div>
+
+        <nav class="nav-menu">
+            <input type="checkbox" id="checkbox-toggle">
+            <label for="checkbox-toggle" class="hamburger"><span class="hamburger-line"></span></label>
+            <ul class="nav-list">
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="shopping-cart.html">Корзина</a></li>
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+            </ul>
+        </nav>     
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <form method="post" action="">
+                    <fieldset>
+                    <legend>Оплата заказа</legend>
+                    
+                    <div class="input-form">
+                        <label for="payment">Выберите средство платежа:</label>
+                        <select id="payment" name="payment" required>
+                            <option value="cash">Наличные при получении</option>
+                            <option value="banc-card">Банковская карта</option>
+                            <option value="installment">Рассрочка</option>
+                            <option value="sertificate">Подарочный сертификат</option>
+                            <option value="points">Баллы нашего магазина</option>
+                            <option value="sber">Баллы СберСпасибо</option>
+                        </select>
+                    </div>
+
+                    <div class="input-form">
+                        <label for="promocode">Промокод:</label>
+                        <input type="text" id="promocode" name="promocode" placeholder="Введите промокод">
+                    </div>
+
+                    <div class="input-form">
+                        <label for="date">Дата доставки:</label>
+                        <input type="datetime-local" id="date" name="date" min="2023-10-15T00:00" max="2024-12-31T23:59" placeholder="Введите дату доставки" required>
+                    </div>                    
+
+                    <div class="input-form">
+                        <label for="address">Адрес доставки:</label>
+                        <textarea id="address" name="address"cols="40" rows="5" minlength="10" maxlength="200" placeholder="Введите адрес доставки" required></textarea>
+                    </div>
+                      
+                    <div class="input-form">
+                        <label for="phone">Контактный телефон:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Введите номер телефона" required>
+                    </div>
+
+
+                      
+                    <div class="input-form"><input type="submit" value="Отправить"></div>
+                    </fieldset>
+                  </form> 
+
+                  <div class="map">
+                      <h1>Мы находимся здесь!</h1>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19254.155800235738!2d37.48500802304087!3d55.67294861331134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54dc1d23b51c3%3A0x74763ed59c81ccb6!2z0KDQotCjINCc0JjQoNCt0JA!5e0!3m2!1sru!2sfr!4v1697380993816!5m2!1sru!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="about-us">
+            <h3>О нас</h3>
+            <p>
+                Добро пожаловать в Мебельную Галерею! В нашем магазине мы предлагаем широкий ассортимент стильной и функциональной мебели для вашего дома. Наш магазин создан с любовью к дизайну и заботой о вашем комфорте.
+            </p>
+        </div>
+
+        <div class="quick-links">
+            <h3>Быстрые ссылки</h3>
+            <ul>
+                <li><a href="index.html">Главная страница</a></li>
+                <li><a href="page.html">Диваны</a></li>
+                <li><a href="login.html">Авторизация</a></li>
+                <li><a href="shopping-cart.html">Корзина</a></li>
+                <li><a href="#">Правила сайта</a></li>
+                <li><a href="#">Галерея изображений</a></li>
+            </ul>
+        </div>
+
+        <div class="shop">
+            <h3>Магазин</h3>
+            <ul>
+                <li><a href="#">Диваны</a></li>
+                <li><a href="#">Кровати</a></li>
+                <li><a href="#">Кресла</a></li>
+                <li><a href="#">Стулья</a></li>
+                <li><a href="#">Столы</a></li>               
+                <li><a href="#">Шкафы</a></li>
+             </ul>
+        </div>
+
+        <div class="contact-us">
+            <h3>Свяжитесь с нами</h3>
+            <address>
+                Телефон: <a href="tel:+79999999999">+7 (999) 999-99-99</a></p>
+                Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            </address>
+            <div class="circle-buttons">
+                <button class="circle" id="circle1"></button>
+                <button class="circle" id="circle2"></button>
+                <button class="circle" id="circle3"></button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
