@@ -202,6 +202,14 @@ footer{
         "ads footer";
     }
 
+    .ads-item:nth-child(2){
+        display: none;
+    }
+
+    .ads-item:nth-child(4){
+        display: none;
+    }
+
 
     footer{
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);

@@ -116,7 +116,7 @@ header{
 @media (max-width: 768px) {
     .nav-list{
         display: none;
-        background-color: #f0f0f0;
+        background-color: rgb(235, 235, 235);
         position: absolute;
         text-align: center;
         top: 60px;
