@@ -221,7 +221,7 @@ footer{
 
 @media (max-width: 768px) {
     body{
-        grid-template: auto auto 500px auto auto / auto;
+        grid-template: auto auto auto auto auto / auto;
         grid-template-areas: 
         "header"
         "main"
@@ -235,9 +235,9 @@ footer{
     }
 
     .filter-block{
-        height: 50vh;
+
         display: grid;
-        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        grid-template: repeat(4, auto) / repeat(2, 1fr);
         grid-template-areas:
         "h3 h3"
         "item1 item2"
